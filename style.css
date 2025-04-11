@@ -15,5 +15,5 @@ nav ul {
 }
 
 nav li {
-  display: flex;
+  flex: 1;
 }
