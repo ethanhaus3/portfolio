@@ -10,10 +10,10 @@ body {
 
 }
 
-.nav-list {
+nav ul {
   display: contents;
 }
 
-.nav-list li {
+nav li {
   display: contents;
 }
