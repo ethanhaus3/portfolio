@@ -11,12 +11,16 @@ body {
 }
 
 nav ul {
-  display: flex;
+  display: contents;
 
 }
 
-
+nav li{
+  display: contents;
+  flex:1
+}
 
 nav a {
+  display: flex;
   flex: 1;
 }
