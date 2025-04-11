@@ -9,3 +9,11 @@ body {
 
 
 }
+
+.nav-list {
+  display: contents;
+}
+
+.nav-list li {
+  display: contents;
+}
