@@ -11,9 +11,9 @@ body {
 }
 
 nav ul {
-  display: contents;
+  display: flex;
 }
 
 nav li {
-  display: contents;
+  display: flex;
 }
