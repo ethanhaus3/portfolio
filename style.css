@@ -10,6 +10,9 @@ body {
 
 }
 
+nav {
+  display: flex;
+}
 nav ul {
   display: contents;
   margin-bottom: auto;
@@ -75,4 +78,49 @@ textarea{
 
 button{
   padding: 0.8em;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+article{
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em
+}
+article.h2{
+  margin: 0
+}
+
+h1 {
+  font-size: 400%; /* Make h1 significantly larger than default */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1; /* Tighter line height for headings */
+  text-wrap: balance; /* Balance text for more even lines */
+}
+
+.resume-header{
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #FF0000;
+
+
+}
+section{
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #FF0000;
+}
+
+.resume-header a{
+  color: #FF0000
+}
+
+.resume-header h1{
+  text-align: center;
+
 }
