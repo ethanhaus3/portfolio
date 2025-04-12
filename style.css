@@ -37,3 +37,13 @@ nav a.current {
   padding-bottom: 0.1em; /* compensate for thicker border */
   font-weight: bold;
 }
+
+:root {
+  --color-accent: oklch(0.62 0.2726 22.62);
+  accent-color: var(--color-accent);
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h)
+}
