@@ -38,6 +38,14 @@ nav a.current {
   font-weight: bold;
 }
 
+form{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  align-items: center;
+  margin-top: 2em;
+}
+
 :root {
   --color-accent: oklch(0.62 0.2726 22.62);
   accent-color: var(--color-accent);
@@ -49,15 +57,22 @@ nav a:hover {
 }
 
 label {
-  display: block;                 /* makes it behave like a paragraph */
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;                 
   margin-block: 0.5rem;           /* adds spacing above and below */
 }
 
 input,
-textarea,
-select {
+textarea{
+  grid-column: 2;
   display: block;                 /* puts them on their own line */
   width: 100%;                    /* makes them span the full container */
-  box-sizing: border-box;         /* includes padding and border in that width */
+  box-sizing: border-box; 
+  resize: vertical;
   font: inherit;                  /* makes font match the rest of the site */
+}
+
+button{
+  padding: 0.8em;
 }
