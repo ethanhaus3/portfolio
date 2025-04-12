@@ -11,7 +11,7 @@ body {
 }
 
 nav ul {
-  display: flex;
+  display: contents;
   margin-bottom: auto;
   border-bottom-width: 1px;
   border-bottom-style: solid;
