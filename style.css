@@ -11,16 +11,28 @@ body {
 }
 
 nav ul {
-  display: contents;
-
+  display: flex;
+  margin-bottom: auto;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: oklch(80% 3% 200);
 }
 
 nav li{
-  display: contents;
   flex:1
 }
 
 nav a {
   display: flex;
   flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(90% 3% 200); /* lighter gray */
+  padding-bottom: 0.1em; /* compensate for thicker border */
+  font-weight: bold;
 }
