@@ -19,6 +19,7 @@ nav ul {
 }
 
 nav li{
+  display: contents;
   flex:1
 }
 
