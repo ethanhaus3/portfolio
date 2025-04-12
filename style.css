@@ -47,3 +47,17 @@ nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   background-color: oklch(from var(--color-accent) 95% 5% h)
 }
+
+label {
+  display: block;                 /* makes it behave like a paragraph */
+  margin-block: 0.5rem;           /* adds spacing above and below */
+}
+
+input,
+textarea,
+select {
+  display: block;                 /* puts them on their own line */
+  width: 100%;                    /* makes them span the full container */
+  box-sizing: border-box;         /* includes padding and border in that width */
+  font: inherit;                  /* makes font match the rest of the site */
+}
