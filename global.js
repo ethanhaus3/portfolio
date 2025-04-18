@@ -38,11 +38,11 @@ a.classList.toggle(
     a.host === location.host && a.pathname === location.pathname,
   );
 
-  let currentLink = navLinks.find(
+let currentLink = navLinks.find(
     (a) => a.host === location.host && a.pathname === location.pathname,
   );
 
-  if (currentLink) {
+if (currentLink) {
     // or if (currentLink !== undefined)
     currentLink.classList.add('current');
   }
