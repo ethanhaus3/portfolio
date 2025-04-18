@@ -39,10 +39,12 @@ for (let a of navLinks) {
   
 
 for (let a of navLinks) {
+    const isExternal = a.host !== location.host;
+
     // Add 'current' class if it matches the current page
     a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
   
-    onsole.log(`Checking: ${a.href} — external? ${isExternal}`);
+    console.log(`Checking: ${a.href} — external? ${isExternal}`);
 
   // Add target if it's external
   if (isExternal) {
