@@ -23,19 +23,20 @@ for (let p of pages) {
   ? "/"                  // Local server
   : "/website/";         // GitHub Pages repo name
 
-  url = !url.startsWith('http') ? BASE_PATH + url : url;
-    nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
+    url = !url.startsWith('http') ? BASE_PATH + url : url;
+    let a = document.createElement('a');
+    a.href = url;
+    a.textContent = title;
+    nav.append(a);
   }
 
 
 const navLinks = $$("nav a");
 
-let currentLink = navLinks.find(
-    (a) => a.host === location.host && a.pathname === location.pathname,
+a.classList.toggle(
+    'current',
+    a.host === location.host && a.pathname === location.pathname,
   );
 
-if (currentLink) {
-// or if (currentLink !== undefined)
-    currentLink.classList.add('current');
-}
+
 
