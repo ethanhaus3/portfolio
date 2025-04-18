@@ -33,10 +33,7 @@ for (let p of pages) {
 
 const navLinks = $$("nav a");
 
-a.classList.toggle(
-    'current',
-    a.host === location.host && a.pathname === location.pathname,
-  );
+
 
 let currentLink = navLinks.find(
     (a) => a.host === location.host && a.pathname === location.pathname,
