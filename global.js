@@ -43,6 +43,10 @@ if (currentLink) {
     // or if (currentLink !== undefined)
     currentLink.classList.add('current');
   }
+a.classList.toggle(
+    'current',
+    a.host === location.host && a.pathname === location.pathname,
+  );
 
 
 
