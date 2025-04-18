@@ -42,8 +42,13 @@ for (let a of navLinks) {
     // Add 'current' class if it matches the current page
     a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
   
-    // Open external links in a new tab
-    a.toggleAttribute("target", a.host !== location.host);
+    onsole.log(`Checking: ${a.href} — external? ${isExternal}`);
+
+  // Add target if it's external
+  if (isExternal) {
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener");
+  }
   }
 
 
