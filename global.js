@@ -33,7 +33,10 @@ for (let p of pages) {
 
 const navLinks = $$("nav a");
 
-
+for (let a of navLinks) {
+    console.log(`Link: ${a.href} → host: ${a.host} vs current: ${location.host}`);
+  }
+  
 
 for (let a of navLinks) {
     // Add 'current' class if it matches the current page
