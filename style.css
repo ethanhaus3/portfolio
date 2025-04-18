@@ -35,11 +35,11 @@ nav a {
   padding: 0.5em;
 }
 
-nav a.current {
+/*nav a.current {
   border-bottom: 0.4em solid oklch(90% 3% 200); /* lighter gray */
-  padding-bottom: 0.1em; /* compensate for thicker border */
-  font-weight: bold;
-}
+  /*padding-bottom: 0.1em; /* compensate for thicker border */
+  /*font-weight: bold;
+}*/
 
 form{
   display: grid;
