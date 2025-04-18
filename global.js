@@ -35,18 +35,13 @@ const navLinks = $$("nav a");
 
 
 
-let currentLink = navLinks.find(
-    (a) => a.host === location.host && a.pathname === location.pathname,
-  );
-
-if (currentLink) {
-    // or if (currentLink !== undefined)
-    currentLink.classList.add('current');
+for (let a of navLinks) {
+    // Add 'current' class if it matches the current page
+    a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
+  
+    // Open external links in a new tab
+    a.toggleAttribute("target", a.host !== location.host);
   }
-a.classList.toggle(
-    'current',
-    a.host === location.host && a.pathname === location.pathname,
-  );
 
 
 
