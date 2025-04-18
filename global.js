@@ -14,3 +14,10 @@ if (currentLink) {
 // or if (currentLink !== undefined)
     currentLink.classList.add('current');
 }
+
+let pages = [
+    { url: '', title: 'Home' },
+    { url: 'projects/', title: 'Projects' },
+    { url: 'contact/', title: 'Contact Me'},
+    { url: 'resume/', title: 'Resume'}
+  ];
