@@ -18,7 +18,8 @@ nav ul {
   margin-bottom: auto;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: var(--border-color);
+
 }
 
 nav li{
@@ -127,4 +128,9 @@ section{
 
 html {
   color-scheme: dark;
+}
+
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  /* ... other styles and nested rules ... */
 }
