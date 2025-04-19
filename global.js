@@ -65,5 +65,18 @@ schemeSelect.addEventListener("change", () => {
   }
 });
 
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  
+	<label class="color-scheme">
+    Color scheme:
+    <select id="scheme-select">
+      <option value="auto">Automatic</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>
+);
+
 
 
