@@ -93,6 +93,7 @@ schemeSelect.addEventListener("change", () => {
   } else {
     document.documentElement.style.setProperty("color-scheme", scheme);
   }
+  localStorage.colorScheme = event.target.value;
 });
 
 
