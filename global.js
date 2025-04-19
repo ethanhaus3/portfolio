@@ -53,10 +53,40 @@ for (let a of navLinks) {
   }
   }
 
-  const schemeSelect = document.getElementById("scheme-select");
 
+
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+  <label class="color-scheme">
+    Theme:
+    <select id="scheme-select">
+      <option value="auto">Automatic</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>
+`
+);
+
+// Grab the select element
+const schemeSelect = document.getElementById("scheme-select");
+
+// Load any saved preference
+const savedScheme = localStorage.getItem("preferred-color-scheme");
+if (savedScheme) {
+  schemeSelect.value = savedScheme;
+  if (savedScheme === "auto") {
+    document.documentElement.style.removeProperty("color-scheme");
+  } else {
+    document.documentElement.style.setProperty("color-scheme", savedScheme);
+  }
+}
+
+// Save and apply changes when user selects a different theme
 schemeSelect.addEventListener("change", () => {
   const scheme = schemeSelect.value;
+  localStorage.setItem("preferred-color-scheme", scheme);
 
   if (scheme === "auto") {
     document.documentElement.style.removeProperty("color-scheme");
@@ -64,19 +94,5 @@ schemeSelect.addEventListener("change", () => {
     document.documentElement.style.setProperty("color-scheme", scheme);
   }
 });
-
-document.body.insertAdjacentHTML(
-  'afterbegin',
-  
-	<label class="color-scheme">
-    Color scheme:
-    <select id="scheme-select">
-      <option value="auto">Automatic</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
-  </label>
-);
-
 
 
