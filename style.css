@@ -135,3 +135,15 @@ nav {
   --border-color: oklch(50% 10% 200 / 40%);
   /* ... other styles and nested rules ... */
 }
+
+.color-scheme {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: Canvas;
+  color: CanvasText;
+  padding: 0.5rem;
+  border: 1px solid CanvasText;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}

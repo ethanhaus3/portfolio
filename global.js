@@ -53,5 +53,17 @@ for (let a of navLinks) {
   }
   }
 
+  const schemeSelect = document.getElementById("scheme-select");
+
+schemeSelect.addEventListener("change", () => {
+  const scheme = schemeSelect.value;
+
+  if (scheme === "auto") {
+    document.documentElement.style.removeProperty("color-scheme");
+  } else {
+    document.documentElement.style.setProperty("color-scheme", scheme);
+  }
+});
+
 
 
