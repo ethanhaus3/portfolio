@@ -137,7 +137,7 @@ nav {
 }
 
 .color-scheme {
-  position: fixed;
+  position: absolute;
   top: 1rem;         /* Adjust the distance from the top */
   right: 1rem;       /* Adjust the distance from the right */
   background-color: Canvas;
@@ -145,7 +145,7 @@ nav {
   border: 1px solid CanvasText;
   border-radius: 0.5rem;
   font-family: sans-serif;
-  font-size: 0.75rem;  /* Make the font smaller */
+  font-size: 80%;  /* Make the font smaller */
   padding: 0.3rem 0.5rem;  /* Reduce padding to make it smaller */
   z-index: 1000;      /* Ensure it stays on top */
 }
