@@ -96,4 +96,53 @@ schemeSelect.addEventListener("change", () => {
   localStorage.colorScheme = event.target.value;
 });
 
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+    console.log(response);
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+  containerElement.innerHTML = '';
+
+  // Create the article element
+  const article = document.createElement('article');
+
+  article.innerHTML = `
+    <h3>${project.title}</h3>
+    <img src="${project.image}" alt="${project.title}">
+    <p>${project.description}</p>
+`;
+
+  // Create the project title element
+  const title = document.createElement(headingLevel);
+  title.textContent = project.title;
+
+  // Create the image element
+  const image = document.createElement('img');
+  image.src = project.image;
+  image.alt = project.title;
+
+  // Create the description element
+  const description = document.createElement('p');
+  description.textContent = project.description;
+
+  // Append the elements to the article
+  article.appendChild(title);
+  article.appendChild(image);
+  article.appendChild(description);
+
+  // Append the article to the container element
+  containerElement.appendChild(article);
+}
+
 
