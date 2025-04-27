@@ -119,6 +119,12 @@ export async function fetchJSON(url) {
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
 
+  const projectsTitle = document.querySelector(".projects-title");
+  if (projectsTitle) {
+    projectsTitle.textContent = `${project.length} Projects`;
+  }
+
+
   project.forEach(project => {
     // Create the article element
     const article = document.createElement('article');
@@ -133,6 +139,10 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     // Append the article to the container element
     containerElement.appendChild(article);
   });
+};
+
+export async function fetchGithubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
 }
 
 

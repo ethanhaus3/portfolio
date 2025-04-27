@@ -158,3 +158,21 @@ nav {
   border-radius: 0.25rem; /* Rounded corners */
 }
 
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  text-align: center;
+  margin: 0;
+}
+
