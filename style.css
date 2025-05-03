@@ -176,3 +176,68 @@ nav {
   margin: 0;
 }
 
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr)); /* Responsive grid layout */
+  gap: 0.5em 1em; /* optional: spacing between rows and columns */
+  align-items: center;
+  margin-block: auto;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+}
+
+.swatch {
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  display: inline-block;
+  margin-right: 0.5em;
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start; /* Aligns the chart and legend to the top */
+  justify-content: space-between; /* Optional: gives space between pie chart and legend */
+  gap: 1em; /* Optional: adds space between the pie chart and the legend */
+}
+
+.container .legend {
+  flex:1;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
