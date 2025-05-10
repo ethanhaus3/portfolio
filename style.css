@@ -241,3 +241,69 @@ path {
   }
 }
 
+.stats {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid var(--color-gray);
+  border-radius: 0.5rem;
+  background-color: color-mix(in oklch, var(--color-gray), canvas 90%);
+}
+
+.stats dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.stats dt {
+  font-weight: bold;
+  
+}
+
+.stats dd {
+  margin: 0.25rem;
+  font-size: 1.5rem;
+}
+
+#chart .tick line {
+  stroke: #aaa;      /* light gray instead of pure black */
+  opacity: 0.3;      /* reduce brightness */
+}
+
+dl.info {
+  /* ... other styles ... */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+dl.info {
+  background-color: rgba(23, 23, 40, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  backdrop-filter: blur(8px);
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+
+
+
+

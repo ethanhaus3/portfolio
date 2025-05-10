@@ -6,14 +6,31 @@
   <title>Meta</title>
   <link rel="stylesheet" href="../style.css">
   <script type="module" src="../global.js"></script>
-  
-
-
-</head>
+  <script type="module"  src="./main.js"></script> 
+  </head>
 <body>
   
   <h1>Meta</h1>
   <p>This page will include stats about the code on the website</p>
+  <div id="stats"></div>
+
+  <h2>Commits by time of day</h2>
+  <div id="chart"></div>
+
+  <dl id="commit-tooltip" class="info tooltip">
+    <dt>Commit</dt>
+    <dd>
+      <a href="" id="commit-link" target="_blank"></a>
+    </dd>
+  
+    <dt>Date</dt>
+    <dd id="commit-date"></dd>
+  
+    <!-- Add: Time, author, lines edited -->
+  </dl>
+
+  <dl id="commit-tooltip" class="info tooltip" hidden></dl>
+
   
   
 
