@@ -569,7 +569,7 @@ function onTimeSliderChange() {
     filteredCommits = commits.filter((d) => d.datetime <= currentDate);
   
     // Update visualizations
-    updateScatterPlot(data, filteredCommits);
+    //updateScatterPlot(data, filteredCommits);
     updateCommitInfo(data, filteredCommits);
     document.querySelector(
       "#selection-count"
