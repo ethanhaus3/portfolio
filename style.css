@@ -395,13 +395,20 @@ dd {
   position: relative;
 }
 
+#scatter-story p {
+  margin-block: 8vh; /* Creates enough room to scroll through */
+}
+
+
 #scatter-plot {
   position: sticky;
-  top: 0;
-  left: 0;
-  bottom: auto;
-  height: 50vh;
+  top: 1rem; /* Optional: gives space at top */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 
 
