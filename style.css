@@ -402,9 +402,8 @@ dd {
 
 #scatter-plot {
   position: sticky;
-  top: 1rem; /* Optional: gives space at top */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
 }

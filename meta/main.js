@@ -121,6 +121,7 @@ function renderScatterPlot(data, commits) {
   const width = 1000;
   const height = 600;
 
+
   const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
 
   const svg = d3
@@ -441,10 +442,11 @@ function onTimeSliderChange() {
     const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
     const rScale = d3.scaleSqrt().domain([minLines, maxLines]).range([2, 30]);
   
-    //const xAxis = d3.axisBottom(xScale);
+    const xAxis = d3.axisBottom(xScale);
     const xAxisGroup = svg.select('g.x-axis');
     xAxisGroup.selectAll('*').remove();
-    const xAxis = d3.axisBottom(xScale);
+    xAxisGroup.call(xAxis);
+    //const xAxis = d3.axisBottom(xScale);
     const yAxis = d3.axisLeft(yScale)
       .tickFormat((d) => String(d % 24).padStart(2, "0") + ":00");
 
@@ -487,6 +489,9 @@ function onTimeSliderChange() {
         updateTooltipVisibility(false);
       });
   }
+
+  
+  
 
   function updateFileDisplay(commits){
     const lines = commits.flatMap((d) => d.lines);
