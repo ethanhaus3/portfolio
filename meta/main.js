@@ -606,7 +606,3 @@ function onTimeSliderChange() {
       // Remove the active class when exiting a step
       d3.select(response.element).classed("is-active", false);
     });
-
-
-
-
