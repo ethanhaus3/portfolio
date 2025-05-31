@@ -12,12 +12,55 @@
   
   <h1>Meta</h1>
   <p>This page will include stats about the code on the website</p>
+
   <div id="stats"></div>
 
-  <h2>Commits by time of day</h2>
-  <div id="chart"></div>
+  <label>
+    Show commits until:
+    <input id="commit-progress" type="range" min="0" max="100" value="-1" step="1" />
+    <span style="display: block">
+      <time id="commit-time" style="display: none;"></time>
+      <em id="any-time" style="display: block; color: #888; font-style: italic">(any time)</em>
+    </span>
+  </label>
 
-  <dl id="commit-tooltip" class="info tooltip">
+
+  
+
+  <div id="scrolly-1">
+    <div id="scatter-story">
+      <p>
+        Scroll to explore how my repository has evolved over time!
+      </p>
+    </div>
+    <div id="scatter-plot">
+      <h2>Commits by time of day</h2>
+      <div id="chart"></div>
+      <p id="selection-count">No commits selected</p>
+      <dl id="language-breakdown" class="stats"></dl>
+      <dl id="files"></dl>
+    </div>
+  </div>
+  
+  
+
+  
+    <!-- we want the following structure for each file:
+    <div>
+      <dt>
+        <code>{file.name}</code>
+      </dt>
+      <dd>{file.lines.length} lines</dd>
+    </div>
+    -->
+  </dl>
+
+  <!-- we want to achieve this -->
+  <dd>
+    <div class="line"></div>
+  </dd>
+
+  <dl id="commit-tooltip" class="info tooltip" hidden>
     <dt>Commit</dt>
     <dd>
       <a href="" id="commit-link" target="_blank"></a>
@@ -29,11 +72,10 @@
     <!-- Add: Time, author, lines edited -->
   </dl>
 
-  <dl id="commit-tooltip" class="info tooltip" hidden></dl>
 
-  <p id="selection-count">No commits selected</p>
+  
 
-  <dl id="language-breakdown" class="stats"></dl>
+
 
   
   
